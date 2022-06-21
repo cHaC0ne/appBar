@@ -14,7 +14,7 @@
         android:theme="@style/Theme.App_Bar"
         tools:targetApi="31">
         <activity
-            android:name=".alter_activity"
+            android:name=".AlterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

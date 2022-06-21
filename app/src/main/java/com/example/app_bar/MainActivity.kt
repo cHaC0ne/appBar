@@ -1,11 +1,13 @@
 package com.example.app_bar
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.core.app.NavUtils
 import com.example.app_bar.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -46,13 +48,19 @@ class MainActivity : AppCompatActivity() {
             R.id.iMenu2 -> { Snackbar.make(b.root, "Sativa", Snackbar.LENGTH_LONG).show()
                 return true
             }
-            R.id.iMenu3 -> { Snackbar.make(b.root, "CBD", Snackbar.LENGTH_LONG).show()
+            R.id.iMenu3 -> { val myIntent = Intent(this, AlterActivity::class.java)
+                startActivity(myIntent)
                 return true
             }
             R.id.e_Search -> { Snackbar.make(b.root, "Search", Snackbar.LENGTH_LONG).show()
                 return true
             }
-
+            R.id.e_Refresh -> {Snackbar.make(b.root, "Refrescando", Snackbar.LENGTH_LONG).show()
+            return true
+            }
+            R.id.e_Home -> {Snackbar.make(b.root,"Volviendo", Snackbar.LENGTH_LONG).show()
+            return true
+            }
 
 
         }
@@ -65,5 +73,16 @@ class MainActivity : AppCompatActivity() {
             menuInflater.inflate(R.menu.menu_contextual, menu)
 
         }
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+         super.onContextItemSelected(item)
+        when (item.itemId) {
+            R.id.e_p1 -> {
+                Snackbar.make(b.root, "Pueba 1", Snackbar.LENGTH_LONG).show()
+                return true
+            }
+        }
+        return false
     }
 }
