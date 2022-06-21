@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+z
+    <item
+        android:id="@+id/e_Search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom"
+        android:title="Search"
+        app:actionViewClass="android.widget.SearchView" />
+    <item android:title="e_Home"
+        android:id="@+id/e_Home"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/e_Refresh"
+        android:title="Refresh"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_refresh" />
+    <item
+        android:id="@+id/iMenu1"
+        android:title="Indica" />
+
+    <item
+        android:id="@+id/iMenu2"
+        android:title="Sativa" />
+    <item
+        android:id="@+id/iMenu3"
+        android:title="CBD" />
+</menu>

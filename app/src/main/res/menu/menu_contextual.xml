@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Prueba 1" />
+    <item android:title="Prueba 2" />
+    <item android:title="Prueba 3" />
+</menu>
