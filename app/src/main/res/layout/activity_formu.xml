@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:ems="18"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:textSize="40sp"/>
+
+    <EditText
+        android:id="@+id/etMail"
+        android:layout_width="wrap_content"
+        android:layout_height="113dp"
+        android:ems="18"
+        android:hint="E-mail"
+        android:textSize="40sp" />
+
+    <EditText
+        android:id="@+id/etTelf"
+        android:layout_width="wrap_content"
+        android:layout_height="154dp"
+        android:ems="18"
+        android:hint="Telefono"
+        android:inputType="number"
+        android:textSize="40sp" />
+
+    <EditText
+        android:id="@+id/etDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="149dp"
+        android:ems="18"
+        android:hint="Direccion"
+        android:inputType="textPassword"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/bEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:textSize="34sp" />
+
+</LinearLayout>

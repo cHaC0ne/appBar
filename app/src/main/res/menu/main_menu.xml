@@ -5,7 +5,7 @@ z
     <item
         android:id="@+id/e_Search"
         android:icon="@drawable/ic_search"
-        app:showAsAction="ifRoom"
+        app:showAsAction="never"
         android:title="Search"
         app:actionViewClass="android.widget.SearchView" />
     <item android:title="e_Home"

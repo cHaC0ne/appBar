@@ -13,22 +13,38 @@ import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     private lateinit var b: ActivityMainBinding
+companion object {
+    val ID_ARTICULOS = Menu.FIRST
+    val ID_SEMILLAS = Menu.FIRST + 2
+    val ID_CATAS = Menu.FIRST + 3
+}
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         b = ActivityMainBinding.inflate(layoutInflater)
         setContentView(b.root)
+        b.bSocio.setOnClickListener {
+            val myIntent = Intent(this, FormuActivity::class.java)
+            startActivity(myIntent)
+        }
+
 
         actionBar?.setHomeButtonEnabled(true)
 
         val actionBar = supportActionBar
-        actionBar!!.title = "COFFE SHOP"
-        actionBar.subtitle = "Bueno,bonito y barato"
+        actionBar!!.title = "COFFE-SHOP"
+        actionBar.subtitle = "Bueno, bonito y barato"
         actionBar.setIcon(R.drawable.ic_joint)
         actionBar.setDisplayUseLogoEnabled(true)
         actionBar.setDisplayShowHomeEnabled(true)
         registerForContextMenu(b.iMar)
     }
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menu.add(Menu.NONE, ID_ARTICULOS , Menu.NONE, "Articulos")  //PAra crear mis propias opciones de menu desde el codigo
+        menu.add(Menu.NONE, ID_SEMILLAS, Menu.NONE, "Semillas")
+        menu.add(Menu.NONE, ID_CATAS, Menu.NONE,"Catas Programadas")
+
+
          super.onCreateOptionsMenu(menu)
         menuInflater.inflate(R.menu.main_menu, menu)
          // para meter mi menu, que he creado, en este caso main_menu
@@ -61,6 +77,7 @@ class MainActivity : AppCompatActivity() {
             R.id.e_Home -> {Snackbar.make(b.root,"Volviendo", Snackbar.LENGTH_LONG).show()
             return true
             }
+
 
 
         }
