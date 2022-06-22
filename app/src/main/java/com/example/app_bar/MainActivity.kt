@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val actionBar = supportActionBar
         actionBar!!.title = "COFFE SHOP"
-        actionBar.subtitle = "Bueno, bonito y barato"
+        actionBar.subtitle = "Bueno,bonito y barato"
         actionBar.setIcon(R.drawable.ic_joint)
         actionBar.setDisplayUseLogoEnabled(true)
         actionBar.setDisplayShowHomeEnabled(true)
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             R.id.e_Search -> { Snackbar.make(b.root, "Search", Snackbar.LENGTH_LONG).show()
                 return true
             }
-            R.id.e_Refresh -> {Snackbar.make(b.root, "Refrescando", Snackbar.LENGTH_LONG).show()
+            R.id.e_Refresh -> {Snackbar.make(b.root, "Actualizando", Snackbar.LENGTH_LONG).show()
             return true
             }
             R.id.e_Home -> {Snackbar.make(b.root,"Volviendo", Snackbar.LENGTH_LONG).show()
